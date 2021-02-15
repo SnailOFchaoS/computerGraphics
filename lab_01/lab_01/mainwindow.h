@@ -5,6 +5,12 @@
 #include <cmath>
 #include <QtGui>
 #include <QtCore>
+#include <QRadioButton>
+#include <string>
+
+#define SUCCESS 0
+#define INCORRECT_SYMBOLS 1
+#define INCORRECT_NUMBERS_COUNT 2
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,8 +23,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    double rectangle[4];
-    double points[2][10000];
+    double rectangle[4][2];
+    double points[10000][2];
+
+private slots:
+    void on_addPointButton_clicked();
 
 private:
     Ui::MainWindow *ui;
