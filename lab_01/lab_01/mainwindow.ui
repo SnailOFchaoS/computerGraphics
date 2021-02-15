@@ -14,6 +14,29 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="addPointLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>40</y>
+      <width>110</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addPointButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>110</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>add point </string>
+    </property>
+   </widget>
    <widget class="QWidget" name="drawPlace" native="true">
     <property name="geometry">
      <rect>
@@ -23,11 +46,40 @@
       <height>500</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbRectangle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>104</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Прямоугольник</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="rbPoint">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>20</y>
+      <width>104</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Точка</string>
+    </property>
    </widget>
    <widget class="QLabel" name="dialogLable">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
       <width>281</width>
       <height>21</height>
@@ -37,49 +89,99 @@
      <string>Выберите, для какой фигуры считывать значения </string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QLabel" name="rectangleOutputLable">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
-      <width>220</width>
-      <height>50</height>
+      <x>20</x>
+      <y>150</y>
+      <width>110</width>
+      <height>100</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QRadioButton" name="rbRectangle">
-         <property name="text">
-          <string>rectangle</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="addPointButton">
-         <property name="text">
-          <string>add point </string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QRadioButton" name="rbPoint">
-         <property name="text">
-          <string>points</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="addPointLineEdit"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pointsOutputLable">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>150</y>
+      <width>110</width>
+      <height>200</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вершины прмоугольника</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>121</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Точки</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deletePointButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>110</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>delete point</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="addPointLineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>70</y>
+      <width>110</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="drawButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>110</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>visualize</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
