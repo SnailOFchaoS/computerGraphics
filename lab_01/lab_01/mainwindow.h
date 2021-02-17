@@ -3,15 +3,20 @@
 
 #include <QMainWindow>
 #include <cmath>
+#include <iomanip>
+#include <sstream>
 #include <QtGui>
 #include <QtCore>
 #include <QRadioButton>
+#include <QLabel>
 #include <string>
 
 #define SUCCESS 0
 #define INCORRECT_SYMBOLS 1
 #define INCORRECT_NUMBERS_COUNT 2
 #define EMPTY_INPUT 3
+#define NOT_RECTANGLE 10
+#define NOT_TRIANGLE 11
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,6 +32,9 @@ public:
     int rectangle[4][2];
     int points[10000][2];
     int pointsCount = 0, rectanglePointsCount = 0;
+    float rectangleMiddle[2];
+    int triangle[3][2];
+    float lineSize;
 
 private slots:
     void setRectanglePoint(QString text);
@@ -35,6 +43,9 @@ private slots:
     QString makeTextForOutput();
     void deleteRectanglePoint(QString text);
     void deletePoint(QString text);
+    int isRectangle();
+    void calculateRectangleMiddle();
+    void findTriangle();
 
     void on_addPointButton_clicked();
 

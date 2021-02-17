@@ -37,8 +37,10 @@ public:
     QLabel *label;
     QLabel *label_2;
     QPushButton *deletePointButton;
-    QLineEdit *addPointLineEdit_2;
+    QLineEdit *deletePointLineEdit;
     QPushButton *drawButton;
+    QLabel *label_3;
+    QLabel *answerOutputLable;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -85,12 +87,19 @@ public:
         deletePointButton = new QPushButton(centralwidget);
         deletePointButton->setObjectName(QString::fromUtf8("deletePointButton"));
         deletePointButton->setGeometry(QRect(20, 70, 110, 23));
-        addPointLineEdit_2 = new QLineEdit(centralwidget);
-        addPointLineEdit_2->setObjectName(QString::fromUtf8("addPointLineEdit_2"));
-        addPointLineEdit_2->setGeometry(QRect(150, 70, 110, 20));
+        deletePointLineEdit = new QLineEdit(centralwidget);
+        deletePointLineEdit->setObjectName(QString::fromUtf8("deletePointLineEdit"));
+        deletePointLineEdit->setGeometry(QRect(150, 70, 110, 20));
         drawButton = new QPushButton(centralwidget);
         drawButton->setObjectName(QString::fromUtf8("drawButton"));
         drawButton->setGeometry(QRect(20, 100, 110, 23));
+        label_3 = new QLabel(centralwidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(120, 370, 47, 13));
+        answerOutputLable = new QLabel(centralwidget);
+        answerOutputLable->setObjectName(QString::fromUtf8("answerOutputLable"));
+        answerOutputLable->setGeometry(QRect(20, 390, 240, 130));
+        answerOutputLable->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -118,6 +127,8 @@ public:
         label_2->setText(QCoreApplication::translate("MainWindow", "\320\242\320\276\321\207\320\272\320\270", nullptr));
         deletePointButton->setText(QCoreApplication::translate("MainWindow", "delete point", nullptr));
         drawButton->setText(QCoreApplication::translate("MainWindow", "visualize", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "\320\236\321\202\320\262\320\265\321\202", nullptr));
+        answerOutputLable->setText(QString());
     } // retranslateUi
 
 };
